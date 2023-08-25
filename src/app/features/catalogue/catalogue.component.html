@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div
+      class="product-container col-6 col-md-4 col-lg-3 mt-3 mb-3"
+      *ngFor="let product of products; let i = index"
+    >
+      <div
+        class="product-card d-flex flex-row justify-content-center shadow-lg"
+      >
+        <img [src]="product.image" alt="Product Image" class="imgClass" />
+        <h3 class="name">{{ product.name }}</h3>
+        <p>Weight: {{ product.weight }}</p>
+        <p class="price">Price: {{ product.price }}</p>
+        <div *ngIf="product.quantity > 0; else addToCartButton">
+          <button (click)="decreaseQuantity(product)" class="btn btn-primary">
+            -
+          </button>
+          <span class="quantitySpan">{{ product.quantity }}</span>
+          <button (click)="increaseQuantity(product)" class="btn btn-primary">
+            +
+          </button>
+        </div>
+        <ng-template #addToCartButton>
+          <button (click)="addToCart(product)" class="btn btn-primary">
+            Add to cart
+          </button>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

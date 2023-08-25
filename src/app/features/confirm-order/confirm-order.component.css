@@ -1,0 +1,20 @@
+.succs-order {
+  /* background-color: rgb(196, 204, 201); */
+  color: #50e748;
+  height: 50vh;
+  font-family: "Roboto";
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #50e748;
+  /* margin-bottom: 10%; */
+}
+.tickMark {
+  height: 30%;
+  /* padding: 15px; */
+}
+.track-id {
+  color: black;
+}
+.container {
+  margin-top: 4%;
+}
